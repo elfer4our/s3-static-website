@@ -25,6 +25,8 @@ jobs:
       - name: Debug who we are
         run: aws sts get-caller-identity
 
+      - name: Test S3 access
+        run: aws s3 ls s3://static-website-elfer
 
       - name: Sync files to S3
         run: |
